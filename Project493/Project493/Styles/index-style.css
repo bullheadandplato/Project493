@@ -1,0 +1,46 @@
+﻿body {
+}
+.topBar{
+        background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+        height:40px;
+    padding-left:50px;
+}
+.centerDiv{
+   margin: auto;
+   width: 50%;
+}
+#signup{
+    font-size:60px;
+    background-color:aquamarine;
+    border-radius:5px;
+    border: none;
+    color: white;
+}
+#login{
+   left:60%;
+     font-size:60px;
+    background-color:lightgreen;
+    border-radius:5px;
+    color: white;
+    border: none
+}
+#signup:hover{
+    color:aquamarine;
+    background-color:white;
+    border-radius:10px;
+    font-weight:bold;
+}
+#login:hover {
+    background-color: white;
+    border-radius:10px;
+    font-weight:bold;
+    color:lightgreen;
+}
+.bottomDiv{
+  margin: auto;
+      margin-top:10%;
+    align-content:center;
+  width: 50%;
+  padding-left:25%;
+}
+
