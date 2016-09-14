@@ -8,3 +8,10 @@ function closeNav() {
     document.getElementById("myNav").style.width = "0%";
 
 }
+
+        tinyMCE.init({
+            // General options
+            mode: "textareas",
+            theme: "advanced",
+            plugins: "pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups",      
+});

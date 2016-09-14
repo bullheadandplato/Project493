@@ -71,6 +71,7 @@
     <Content Include="Main.Master" />
     <Content Include="Styles\index-style.css" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="TextArea.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -106,6 +107,16 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="TextArea.aspx.cs">
+      <DependentUpon>TextArea.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TextArea.aspx.designer.cs">
+      <DependentUpon>TextArea.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="tinymce\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
