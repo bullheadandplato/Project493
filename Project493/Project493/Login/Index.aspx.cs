@@ -11,6 +11,27 @@ namespace Project493.Login
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            loginField.Visible = false;
+            CreateUserWizard1.Visible = false;
+           
+        }
+
+        protected void signup_Click(object sender, EventArgs e)
+        {
+            loginField.Visible = false;
+            CreateUserWizard1.Visible = true;
+        }
+
+        protected void login_Click(object sender, EventArgs e)
+        {
+        
+
+            loginField.Visible = true;
+
+        }
+
+        protected void Unnamed_SelectionChanged(object sender, EventArgs e)
+        {
 
         }
     }
