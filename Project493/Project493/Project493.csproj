@@ -66,9 +66,15 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Calander.aspx" />
+    <Content Include="images\else.png" />
+    <Content Include="images\event.png" />
+    <Content Include="images\google.png" />
     <Content Include="Login\Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="Main.Master" />
+    <Content Include="Scripts\index-script.js" />
+    <Content Include="Styles\calendar-style.css" />
     <Content Include="Styles\index-style.css" />
     <Content Include="WebForm1.aspx" />
     <Content Include="TextArea.aspx" />
@@ -85,6 +91,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calander.aspx.cs">
+      <DependentUpon>Calander.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calander.aspx.designer.cs">
+      <DependentUpon>Calander.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
