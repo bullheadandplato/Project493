@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
   
-    <CE:Editor id="Editor123" runat="server" onPostBackCommand="editor_save" />         </div>
+    <CE:Editor id="Editor123" runat="server" onPostBackCommand="editor_save" align="center" />     
 
                 </asp:Content>
 
