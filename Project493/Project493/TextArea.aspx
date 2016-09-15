@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
    <link rel="stylesheet" href="Styles/TextPageStyle.css" />
-    <CE:Editor id="Editor123" runat="server" onPostBackCommand="editor_save" align="center" />     
+    <CE:Editor id="Editor123" runat="server" onPostBackCommand="editor_save" align="center" class="Editor123" />     
 
                 </asp:Content>
 
