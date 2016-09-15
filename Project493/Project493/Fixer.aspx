@@ -1,17 +1,17 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="Project493.Main" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Fixer.aspx.cs" Inherits="Project493.Fixer" %>
+
+
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+        <link rel="stylesheet" href="Styles/main-style.css" />
     <title></title>
-    <link rel="stylesheet" href="Styles/main-style.css" />
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div id="main">
+    <div id="main">
             <div id="header">
 
                 <nav class="headerNav">
@@ -34,21 +34,11 @@
                 </div>
 
             </div>
+        <div>
+            <asp:ScriptManager runat="server">
+            </asp:ScriptManager>
 
-            <!-- Use any element to open/show the overlay navigation menu -->
-            <div>
-                <asp:ScriptManager runat="server" ID="goot">
-                </asp:ScriptManager>
-                <asp:UpdatePanel runat="server">
-                    <ContentTemplate>
-<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                </asp:ContentPlaceHolder>
-                    </ContentTemplate>
-                </asp:UpdatePanel>
-                
-            </div>
-        </div>
     </form>
 </body>
-<script src="Scripts/main-script.js"></script>
+    <script src="Scripts/main-script.js"></script>
 </html>

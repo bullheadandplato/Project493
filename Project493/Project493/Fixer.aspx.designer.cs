@@ -10,15 +10,15 @@
 namespace Project493 {
     
     
-    public partial class Textarea {
+    public partial class Fixer {
         
         /// <summary>
-        /// Editor123 control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::CuteEditor.Editor Editor123;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
     }
 }
