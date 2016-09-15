@@ -101,6 +101,7 @@
     <Content Include="Scripts\index-script.js" />
     <Content Include="Styles\calendar-style.css" />
     <Content Include="Styles\index-style.css" />
+    <Content Include="Styles\TextPageStyle.css" />
     <Content Include="Textarea.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Web.Debug.config">
