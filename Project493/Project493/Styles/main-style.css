@@ -60,7 +60,6 @@
 
 .headerNav {
     background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-    
 }
 
 #openBtn {
@@ -70,5 +69,15 @@
 }
 
     #openBtn:hover {
+        color: #f1f1f1;
+    }
+
+.labelUsername {
+    float: right;
+    font-size: 30px;
+    color: #818181;
+}
+
+    .labelUsername:hover {
         color: #f1f1f1;
     }

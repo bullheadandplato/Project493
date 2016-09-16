@@ -11,7 +11,7 @@ namespace Project493
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            usernameText.Text = SharedData.username;
         }
     }
 }
