@@ -11,7 +11,21 @@ namespace Project493
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            usernameText.Text = SharedData.username;
+            //check session
+            if (Session["UID"]==null || Session.IsNewSession)
+            {
+                Response.Redirect("~/Login/Index.aspx", false);
+            }
+            else
+            {
+                usernameText.Text = (String)Session["username"];
+            }
+        }
+
+        protected void logoutButton_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("~/Login/index.aspx");
         }
     }
 }

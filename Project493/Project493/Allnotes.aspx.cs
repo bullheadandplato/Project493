@@ -12,9 +12,21 @@ namespace Project493
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-           DataTable dt = Note.getAllNotes();
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+
+            //check session
+            if (Session["UID"] == null || Session.IsNewSession)
+            {
+                Response.Redirect("~/Login/Index.aspx", false);
+            }
+            else
+            {
+                Note note = new Note();
+                note.setUID((int)Session["UID"]);
+                DataTable dt = note.getAllNotes();
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+            }
+          
             
         }
 

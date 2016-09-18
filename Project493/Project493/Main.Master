@@ -16,7 +16,8 @@
 
                 <nav class="headerNav">
                     <span id="openBtn" onclick="openNav()">&#9776; Menu</span>
-                    <asp:Label runat="server" ID="usernameText" CssClass="labelUsername" ></asp:Label>
+                    <asp:Button runat="server" ID="logoutButton" CssClass="logoutButton" Text="Logout" OnClick="logoutButton_Click" />
+                                        <asp:Label  runat="server" ID="usernameText" CssClass="labelUsername" ></asp:Label>
                 </nav>
 
             </div>

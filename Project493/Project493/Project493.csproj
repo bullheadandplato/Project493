@@ -125,7 +125,6 @@
     <Compile Include="Calander.aspx.designer.cs">
       <DependentUpon>Calander.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Factory.cs" />
     <Compile Include="Database\LoginPersistence.cs" />
     <Compile Include="Fixer.aspx.cs">
       <DependentUpon>Fixer.aspx</DependentUpon>
@@ -150,7 +149,6 @@
     </Compile>
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SharedData.cs" />
     <Compile Include="Textarea.aspx.cs">
       <DependentUpon>Textarea.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

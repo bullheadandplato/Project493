@@ -10,13 +10,11 @@ namespace Project493.Login
     public partial class Index : System.Web.UI.Page
     {
         LoginPersistence loginOperations;
-        SharedData data;
         Note note;
         
         protected void Page_Load(object sender, EventArgs e)
         {
             loginOperations = new LoginPersistence();
-            data = new SharedData();
             note = new Note();
             
         }
@@ -51,12 +49,9 @@ namespace Project493.Login
             if (loginOperations.checkLogin(username, password))
             {
                 //set the username in main Master page
-                SharedData.username = username;
+                Session.Add("username", username);
                 //set the user id
-                data.setUID(loginOperations.getUID());
-                Note.UID = data.getUID();
-                //user notes load
-                //TODO
+                Session.Add("UID", loginOperations.getUID());
                 //change page
                 Response.BufferOutput = true;
                 Response.Redirect("~/Allnotes.aspx", false);

@@ -81,3 +81,16 @@
     .labelUsername:hover {
         color: #f1f1f1;
     }
+.logoutButton{
+    float: right;
+    font-size: 30px;
+    color: #818181;
+    background-color: transparent;
+    border: none;
+    margin-left: 2%;
+   
+}
+.logoutButton:hover{
+           color: #f1f1f1;
+
+}
