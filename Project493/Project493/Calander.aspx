@@ -15,9 +15,13 @@
         <TodayDayStyle CssClass="dayStyle" Font-Underline="False" ForeColor="White" />
        
     </asp:Calendar>
-              <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
-              <asp:GridView ID="GridView1" runat="server">
+              <div class="centerDiv">
+                  <asp:Label ID="Label1" runat="server"></asp:Label>
+              <asp:GridView OnRowDataBound="GridView1_RowDataBound" ID="GridView1" runat="server" Font-Size="20pt" BorderWidth="5px">
+                  <RowStyle BorderWidth="5px" Font-Size="20pt" />
               </asp:GridView>
+              </div>
+              
           </contenttemplate>
       </asp:updatepanel>
       

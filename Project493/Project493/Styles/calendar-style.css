@@ -22,3 +22,7 @@
 a:-webkit-any-link {
     text-decoration: none !important;
 }
+.centerDiv{
+    margin: auto;
+    width:75%;
+}

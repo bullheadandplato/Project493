@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -9,15 +10,38 @@ namespace Project493
 {
     public partial class Calander : System.Web.UI.Page
     {
-        int[] notes = { 12, 10, 14 };
+        int[] notes;
+        Note note;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-          
+            if (Session["UID"] == null || Session.IsNewSession)
+            {
+                Response.Redirect("~/Login/Index.aspx");
+                return;
+            }
+           note= new Note();
+            note.setUID((int)Session["UID"]);
+            notes=note.getNoteDatesForMonth(Calendar1.VisibleDate.Month, Calendar1.VisibleDate.Year);
         }
         protected void google(object sender, EventArgs e)
         {
-            Label1.Visible = true;
-            Label1.Text = "No note for this date: " + Calendar1.SelectedDate.Day + ":" + Calendar1.SelectedDate.Month + ":" + Calendar1.SelectedDate.Year;
+            DataTable dt= note.getNoteOnDate(Calendar1.SelectedDate.Day, Calendar1.SelectedDate.Month, Calendar1.SelectedDate.Year);
+            if(dt.Rows.Count > 0)
+            {
+                Label1.Text = " Note for selected date ";
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+                GridView1.Visible = true;
+            }
+            else
+            {
+                Label1.Text = "No Note for selected date ";
+                GridView1.Visible = false;
+
+
+            }
+
         }
         protected void dayRender(object sender, DayRenderEventArgs e)
         {
@@ -30,6 +54,15 @@ namespace Project493
                 }
             }
         }
-
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                string decodedText1 = HttpUtility.HtmlDecode(e.Row.Cells[0].Text);
+                e.Row.Cells[0].Text = decodedText1;
+                string decodedText = HttpUtility.HtmlDecode(e.Row.Cells[1].Text);
+                e.Row.Cells[1].Text = decodedText;
+            }
+        }
     }
 }

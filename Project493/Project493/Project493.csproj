@@ -85,7 +85,6 @@
   <ItemGroup>
     <Content Include="Allnotes.aspx" />
     <Content Include="Calander.aspx" />
-    <Content Include="Fixer.aspx" />
     <Content Include="images\else.png" />
     <Content Include="images\event.png" />
     <Content Include="images\google.png" />
@@ -126,13 +125,6 @@
       <DependentUpon>Calander.aspx</DependentUpon>
     </Compile>
     <Compile Include="Database\LoginPersistence.cs" />
-    <Compile Include="Fixer.aspx.cs">
-      <DependentUpon>Fixer.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Fixer.aspx.designer.cs">
-      <DependentUpon>Fixer.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Login\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
