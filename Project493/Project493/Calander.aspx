@@ -16,8 +16,8 @@
        
     </asp:Calendar>
               <div class="centerDiv">
-                  <asp:Label ID="Label1" runat="server"></asp:Label>
-              <asp:GridView OnRowDataBound="GridView1_RowDataBound" ID="GridView1" runat="server" Font-Size="20pt" BorderWidth="5px">
+                  <asp:Label CssClass="labelStyle" ID="Label1" runat="server"></asp:Label>
+              <asp:GridView OnRowDataBound="GridView1_RowDataBound" ID="GridView1" runat="server" Font-Size="20pt" BorderWidth="5px" CellPadding="1" CellSpacing="1" HorizontalAlign="Center" Width="100%">
                   <RowStyle BorderWidth="5px" Font-Size="20pt" />
               </asp:GridView>
               </div>

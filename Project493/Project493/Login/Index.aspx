@@ -105,7 +105,7 @@
                                                     </td>
                                                 </tr>
                                             </table>
-                           <asp:Button ValidationGroup="signup" runat="server" OnClick="signup_Click" CssClass="opButtons" Text="Create User" />
+                           <asp:Button ValidationGroup="signup" OnClientClick="javascript:validations()" runat="server" OnClick="signup_Click" CssClass="opButtons" Text="Create User" />
                         </div>
                 <div id="loginDiv" class="bottomDiv">
                     <table style="font-family:Verdana;font-size:100%; background-color:antiquewhite;">
@@ -158,6 +158,12 @@
         signupDiv.hidden = false;
         errorMessageDiv.hidden = true;
     }
-        window.onload = init();
+    window.onload = init();
+    function validations() {
+        var pass = document.getElementById("<%=Password.ClientID%>").value;
+        if (pass.length < 8) {
+            alert("Password length must be greater than or equal to 8");
+        }
+    }
 </script>
 </html>

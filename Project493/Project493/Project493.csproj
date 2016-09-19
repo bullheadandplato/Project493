@@ -92,6 +92,8 @@
     <Content Include="packages.config" />
     <Content Include="Main.Master" />
     <Content Include="Scripts\index-script.js" />
+    <Content Include="Settings.aspx" />
+    <Content Include="Styles\allnotes-style.css" />
     <Content Include="Styles\calendar-style.css" />
     <Content Include="Styles\index-style.css" />
     <Content Include="Textarea.aspx" />
@@ -141,6 +143,13 @@
     </Compile>
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Textarea.aspx.cs">
       <DependentUpon>Textarea.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

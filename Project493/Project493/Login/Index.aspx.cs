@@ -27,6 +27,10 @@ namespace Project493.Login
             String email = ((TextBox)FindControl("Email")).Text;
             String question = ((TextBox)FindControl("Question")).Text;
             String answer = ((TextBox)FindControl("Answer")).Text;
+            if(Password.Text.Length < 8)
+            {
+                return;
+            }
             if (loginOperations.signupPersist(username, password, email, question, answer))
             {
                 Error.Text = "Signup successfull. Use login now";

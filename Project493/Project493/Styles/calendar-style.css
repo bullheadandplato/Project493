@@ -19,10 +19,20 @@
    background-repeat: no-repeat;
    text-decoration: none !important;
 }
-a:-webkit-any-link {
+a:-webkit-any-link { 
     text-decoration: none !important;
 }
+a{
+    text-decoration: none;
+}
 .centerDiv{
-    margin: auto;
+    margin: auto;   
+     margin-top: 2%;
     width:75%;
+}
+.labelStyle{
+    margin-left: 30%;
+    font-size: 40px;
+    color: lightgray;
+
 }

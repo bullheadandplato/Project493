@@ -23,8 +23,17 @@ namespace Project493
                 Note note = new Note();
                 note.setUID((int)Session["UID"]);
                 DataTable dt = note.getAllNotes();
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+                if(dt.Rows.Count < 1)
+                {
+                    noText.Visible = true;
+                }
+                else
+                {
+                    noText.Visible = false;
+                    GridView1.DataSource = dt;
+                    GridView1.DataBind();
+                }
+                
             }
           
             
@@ -38,6 +47,7 @@ namespace Project493
                 e.Row.Cells[0].Text = decodedText1;
                 string decodedText = HttpUtility.HtmlDecode(e.Row.Cells[1].Text);
                 e.Row.Cells[1].Text = decodedText;
+                
             }
         }
     }
