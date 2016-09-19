@@ -10,7 +10,7 @@
       <asp:updatepanel runat="server">
           <contenttemplate>
              
-              <asp:Calendar ondayrender="dayRender" OnSelectionChanged="google" width="100%" ID="Calendar1" runat="server" BorderWidth="0px" CellPadding="5">
+              <asp:Calendar OnVisibleMonthChanged="Calendar1_VisibleMonthChanged" ondayrender="dayRender" OnSelectionChanged="google" width="100%" ID="Calendar1" runat="server" BorderWidth="0px" CellPadding="5">
         <DayStyle CssClass="dayElse" />
         <TodayDayStyle CssClass="dayStyle" Font-Underline="False" ForeColor="White" />
        

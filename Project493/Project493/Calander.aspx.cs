@@ -20,7 +20,7 @@ namespace Project493
                 Response.Redirect("~/Login/Index.aspx");
                 return;
             }
-           note= new Note();
+             note= new Note();
             note.setUID((int)Session["UID"]);
             notes=note.getNoteDatesForMonth(Calendar1.VisibleDate.Month, Calendar1.VisibleDate.Year);
         }
@@ -45,9 +45,12 @@ namespace Project493
         }
         protected void dayRender(object sender, DayRenderEventArgs e)
         {
-           foreach(int day in notes)
+            notes = note.getNoteDatesForMonth(e.Day.Date.Month, e.Day.Date.Year);
+             
+
+            foreach (int day in notes)
             {
-                if(e.Day.Date == new DateTime(2016, 9, day)  && !e.Day.IsToday)
+                if(e.Day.Date.Day==day  && !e.Day.IsToday)
                 {
                     e.Cell.CssClass = "eventDay";
                     e.Cell.ForeColor = System.Drawing.Color.White;
@@ -63,6 +66,10 @@ namespace Project493
                 string decodedText = HttpUtility.HtmlDecode(e.Row.Cells[1].Text);
                 e.Row.Cells[1].Text = decodedText;
             }
+        }
+
+        protected void Calendar1_VisibleMonthChanged(object sender, MonthChangedEventArgs e)
+        {
         }
     }
 }
